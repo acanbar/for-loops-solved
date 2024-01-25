@@ -4,9 +4,23 @@
 // Array example: bankAccounts in /data/data.js
 // getAllWithdrawals(bankAccounts) => [3432, 0, 43242.34, 0, 23432]
 
-export function getAllWithdrawals(array) {
-  // Your code goes here...
+export function getAllWithdrawals(bankAccounts) {
+  let moneyWithdrawals = [];
 
+  for (let i = 0; i < bankAccounts.length; i++) {
+    const accountMoneyOut = bankAccounts[i];
+    let currentWithdrawals = accountMoneyOut.withdrawals;
+    if (!currentWithdrawals) {
+      currentWithdrawals = [];
+    }
+    
+    let sum = 0;
+    for (let p = 0; p < currentWithdrawals.length; p++) {
+      sum += currentWithdrawals[p];
+    }
+    moneyWithdrawals.push(sum);
+  }
+  return moneyWithdrawals;
 }
 
 // === TEST YOURSELF ===

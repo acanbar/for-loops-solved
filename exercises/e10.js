@@ -3,9 +3,16 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
 
-export function getClientsWithLetterInName(array, letter) {
-  // Your code goes here...
-
+export function getClientsWithLetterInName(bankAccounts, letter) {
+  let namesArray = [];
+  for (let i = 0; i < bankAccounts.length; i++) {
+    for (let h = 0; h < bankAccounts[i].name.length; h++) {
+      if(bankAccounts[i].name[h].toLowerCase() == letter.toLowerCase()) {
+        namesArray.push(bankAccounts[i].name);
+      }
+    }
+  }
+  return namesArray;
 }
 
 // === TEST YOURSELF ===

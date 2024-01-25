@@ -3,21 +3,21 @@
 // findMinValueInArray([2, 45, 32, 3, 0, 46, 12]) => 0
 // findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]) => 46
 
-export function findMinValueInArray(array) {
-  let minValue = array[0];
-  for (let i = 1 ; i < array.length; i++) {
-    if (array[i] < minValue) {
-      minValue = array[i];
+export function findMinValueInArray(bankAccounts) {
+  let minValue = bankAccounts[0];
+  for (let i = 1 ; i < bankAccounts.length; i++) {
+    if (bankAccounts[i] < minValue) {
+      minValue = bankAccounts[i];
     }
   }
   return minValue;
 }
 
-export function findMaxValueInArray(array) {
-  let maxValue = array[0];
-  for (let i = 1 ; i < array.length; i++) {
-    if (array[i] > maxValue) {
-      maxValue = array[i];
+export function findMaxValueInArray(bankAccounts) {
+  let maxValue = bankAccounts[0];
+  for (let i = 1 ; i < bankAccounts.length; i++) {
+    if (bankAccounts[i] > maxValue) {
+      maxValue = bankAccounts[i];
     }
   }
   return maxValue;

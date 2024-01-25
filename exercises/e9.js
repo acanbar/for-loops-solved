@@ -4,9 +4,14 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithBalanceOverOneHundred(array) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
-export function getClientsWithBalanceOverOneHundred(array) {
-  // Your code goes here...
-
+export function getClientsWithBalanceOverOneHundred(bankAccounts) {
+let balanceOver100 = [];
+for (let i = 0; i < bankAccounts.length; i++) {
+  if (bankAccounts[i].balance > 100) {
+    balanceOver100.push(bankAccounts[i]);
+  }
+}
+return balanceOver100;
 }
 
 
