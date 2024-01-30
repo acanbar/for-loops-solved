@@ -8,17 +8,31 @@
 export function separateNamesWithAFromRest(array) {
   let arrayWithA = [];
   let arrayNoA = [];
-  let finalArray = []
+  let finalArray = [];
+
+  // Determine if there is an 'a' or 'A' in every name:
   for (let i = 0; i < array.length; i++) {
+    let containsA = false;
+
     for (let j = 0; j < array[i].length; j++) {
-      if (array[i][j] === 'a') {
-        arrayWithA.push(array[i]);
-      } else {
-        arrayNoA.push(array[i]);
+      if (array[i][j] === 'a' || array[i][j] === 'A') {
+        containsA = true;
+        break;
       }
     }
-    finalArray = arrayWithA + arrayNoA;
+// If it containsA is true, then push to arrayWithA, else to arrayNoA:
+    if (containsA) {
+      arrayWithA.push(array[i]);
+    } else {
+      arrayNoA.push(array[i]);
+    }
   }
+
+// Push each array to finalArray:
+
+  finalArray.push(arrayWithA);
+  finalArray.push(arrayNoA);
+
   return finalArray;
 }
 
