@@ -6,8 +6,13 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
-
+let finalArray = [];
+for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+    finalArray.push(array[i][j]);
+  }
+  }
+  return finalArray;
 }
 
 
@@ -16,3 +21,6 @@ export function flatArrays(array) {
 // Once you're finished run the test with "npm run test-16"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+// MY ALGORITHM:
+// 1 

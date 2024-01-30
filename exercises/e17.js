@@ -6,8 +6,15 @@
 // NOTE: You can NOT use the array.includes() method in your code
 
 export function doesArrayInclude(array, value) {
-  // Your code goes here...
-
+  let includesOrNot;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      includesOrNot = true;
+    } else {
+      includesOrNot = false;
+    }
+  }
+  return includesOrNot;
 }
 
 
